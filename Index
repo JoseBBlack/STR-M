@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>STRØM Interaktiv</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+            overflow: hidden; background: #000;
+        }
+        video {
+            width: 100vw; height: 100vh;
+            object-fit: cover; /* Sikrer at videoen fylder skærmen ligesom i p5.js */
+        }
+        #instructions {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; font-family: Helvetica, Arial, sans-serif;
+            text-align: center; pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="instructions">TRYK FOR AT STARTE STRØM</div>
+    
+    <video id="stromVideo" loop playsinline muted>
+        <source src="STRØM.mp4" type="video/mp4">
+    </video>
+
+    <script src="script.js"></script>
+</body>
+</html>
